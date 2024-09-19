@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign-up for admin</title>
+</head>
+<style>
+    body{
+        height: 110vh;
+    }
+    .form_style{
+        font-size: 12px;
+    }
+    .btn{
+        font-size: 12px;
+    }
+</style>
+<body class="container">
+    <div class="form_area">
+        <h4 class="title"> ADMIN SIGN UP</h4>
+        <form action="/adminsignup" method="POST">
+            <div class="form_group">
+                <label for="name" class="sub_title">Username</label>
+                <input name="username" type="text" class="form_style" id="name" placeholder="Enter your username">
+            </div>
+            <div class="form_group">
+                <label for="email" class="sub_title">Email</label>
+                <input name="email" type="email" class="form_style" id="email" placeholder="Enter your email" />
+            </div>
+            <div class="form_group">
+                <label for="password" class="sub_title">Password</label>
+                <input name="password" type="password" class="form_style" id="password" placeholder="Enter your password" />
+            </div>
+            <div class="form_group">
+                <label for="passkey" class="sub_title">Passkey</label>
+                <input name="passkey" type="password" class="form_style" id="passkey" placeholder="Enter your passkey" />
+            </div>
+            <div>
+                <button type="submit" class="btn">SIGN UP!</button>
+                <p>Already have an Account? <a href="adminloginpage.html" class="link">Login Here!</a></p>
+            </div>
+        </form>
+    </div>
+    <!-- <script src="index.js"></script>
+    <script src="script.js"></script> -->
+</body>
+</html>

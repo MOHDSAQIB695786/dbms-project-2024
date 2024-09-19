@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment1.css">
+    <title>Payment Options</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="cart.html">
+                <button class="logo-button">
+                    <img src="./images/93634.png" alt="Logo">
+                </button>
+            </a>
+            
+            <h1 class="title">Jamia Canteen</h1>
+        </header>
+        <main class="main-content">
+            <div class="card mt-4">
+                <div class="para2">
+                    <p id="paymentAmount">Select an option to pay ₹amount</p>
+                </div>
+            </div>
+            <div class="payment-methods">
+                <div class="qr-payment">
+                    <img src="./images/mohdsaqib8002@sbi.jpg" alt="QR Code" class="qr-image">
+                    <p>Scan QR with any UPI app</p>
+                    <div class="upi-logos">
+                        <img src="./images/phonepe.jpeg" alt="PhonePe">
+                        <img src="./images/paytm3.png"    alt="Paytm">
+                        <img src="./images/gpay.jpeg" alt="Google Pay">
+                        <img src="./images/bhimicon.jpeg" alt="BHIM">
+                    </div>
+                </div>
+                <div class="cash-delivery">
+                    <label for="cash-on-delivery">Cash on delivery</label>
+                    <input type="radio" id="cash-on-delivery" name="payment-method" onclick="setPaymentMode()">
+                  </div>
+                
+             
+                <button class="pay-button" onclick="window.location.href = 'sucess.html';">PAY</button>
+
+
+            </div>
+        </main>
+    </div>
+    <script>
+        window.onload = function () {
+           
+                var totalPrice = localStorage.getItem('totalPrice') || '0'; // Get the total price from local storage
+                document.getElementById('paymentAmount').innerText = 'Select an option to pay ₹' + totalPrice;
+        };
+        function updateTotalPrice() {
+           
+
+           
+        }
+
+        function setPaymentMode() {
+  var paymentMethod = document.getElementById('cash-on-delivery');
+  if (paymentMethod.checked) {
+    localStorage.setItem('paymentMode', 'CASH');
+  }
+  else{
+    localStorage.setItem('paymentMode', 'UPI');
+
+  }
+}
+
+    </script>
+</body>
+</html>

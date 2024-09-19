@@ -1,0 +1,245 @@
+
+<!-- ///////////////////////////mainpage.html///////////////////////////// -->
+!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Jamia Canteen</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+ 
+  
+ <link rel="stylesheet" href="mainpages.css">
+ <link rel="icon" href="/favicon.ico" type="image/x-icon">
+ <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+
+</head>
+<style>
+  .abcd{
+    position: relative;
+    left:10px;
+    top: -25px;
+    bottom: 30px;
+  }
+  .nba{
+  
+    height: 40px;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: flex-start;
+     /* Adjust this value to change the space between icons */
+}
+
+@media (max-width: 1100px) {
+    .alogin,.blogin {
+      width: 100%;
+    }
+ 
+  }
+
+.social-icons a {
+  
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Makes the icon slightly larger when hovered */
+}
+
+</style>
+<body>
+  <!-- navbar -->
+
+  <div class="container-fluid bg-dark  sticky-top  ">
+    <div class="row p-0 m-0">
+      <div class="col p-0 m-3">
+        <div class="navbar  navbar-dark bg-dark navbar-expand-lg  p-0 m-0  nba">
+    
+          <div class="navbar-brand  " id="logo">
+            <h3><img src="favicon.ico" alt="" style="width: 50px; height: 50px;"> JAMIA CANTEEN </h3>
+
+          </div>
+          <div class="navbar-toggler " data-toggle="collapse" data-target="#mynav">
+            <div class="navbar-toggler-icon"></div>
+          </div>
+          <ul class="navbar-nav collapse navbar-collapse  " id="mynav">
+            <h4>
+              <li class="nav-item ms-0"><a href="mainpage.html" class="nav-link">Home</a></li>
+            </h4>
+            <h4>
+              <li class="nav-item"><a href="vision.html" class="nav-link">Vision</a></li>
+            </h4>
+            <h4>
+              <li class="nav-item"><a href="vision.html" class="nav-link">Mission</a></li>
+            </h4>
+            <h4>
+              <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Login</a>
+                  <div class="dropdown-menu">
+                      <a href="loginpage.html" class="dropdown-item">User Login</a>
+                      <a href="adminloginpage.html" class="dropdown-item">Admin Login</a>
+                  </div>
+              </li>
+          </h4>
+          
+            <!-- <h4>
+              <li class="nav-item"><a href="" class="nav-link ">Signup</a></li>
+            </h4> -->
+            <h4>
+      
+            </h4>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+
+<!-- message -->
+  <div class="message">
+    Welcome to the Canteen Management System!Enjoy easy ordering, delicious meals, and a seamless dining
+    experience.Your
+    satisfaction is our top priority.Indulge in a feast for the senses!
+  </div>
+
+
+  <!------------------------------------------- LOGIN -------------------------------------------------->
+  <div class="container-fluid navbar  navbar-expand-md mx-auto">
+    <div class="row mx-auto">
+      
+      <div class="col-md-3 col1 abcd alogin p-1 mt-5"   >
+        <div class="containerlog col-md-12  mb-100 "   >
+          
+          
+          <form id="loginForm" action="/login" method="POST" onsubmit="handleLogin(event)">
+            <div class="msgform">Welcome Back </div>
+            <div class="msgform1"> Log in to access your account and enjoy our canteen's delicious foods </div>
+
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input type="text" placeholder="enter your username" class="form-control" id="username" name="username">
+            </div>
+            <div class="form-group">
+              <label for="password" >Password:</label>
+              <input type="password"placeholder="enter your password" class="form-control" id="password" name="password">
+            </div>
+            <button type="submit" class="btn btn-danger  bt1 mx-auto ">Login</button>
+            
+          </form>
+          <form id="signupForm" action="\signup" method="post"> 
+            <div class="msgsignup form-group">Don't have an account? 
+                <div class="linkforsignup"> 
+                    <a href="signup.html" class="btn  btn-danger bt1 mx-auto">Signup</a>
+                </div>
+            </div>
+        </form>
+      
+        </div>
+      </div>
+      <div class="col-md-8 cols p-10 m-3 blogin" >
+
+        <!--------------------------------------- carousel  ---------------------------------------->
+        <div id=mycarousel class="carousel navbar navbar-expand-lg container-fluid slide " data-ride="carousel" >
+          <div class="carousel-inner carousel-fade">
+            <ol class="carousel-indicators">
+              <li data-target="#mycarousel"data-slide-to="0" class="active"></li>
+              <li data-target="#mycarousel"data-slide-to="1" ></li>
+              <li data-target="#mycarousel"data-slide-to="2"></li>
+              <li data-target="#mycarousel"data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-item active"data-interval="1000" >
+              <img class="image"src="https://i0.wp.com/www.opindia.com/wp-content/uploads/2022/07/Jamia-canteen-e1658239372392.jpg?resize=696%2C419&ssl=1" class="d-block w-100" alt="">
+           <div class="carousel-caption">
+             <h5>CENTRAL CANTEEN</h5>
+
+           </div>
+            </div>
+            
+            <div class="carousel-item "data-interval="1000">
+              <img  class="image" src="https://live.staticflickr.com/8114/8674068395_8699057f55_b.jpg" alt="" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>CASTRO CAFE </h5>
+   
+              </div>
+            </div>
+            <div class="carousel-item  "data-interval="1000">
+              <img  class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsC9jQ0cK3RPHY1frvVcMbHCnxsrR1pezGYF6nM_LA4Lwq7kKoS0ZFMMDsvjSSBKCzg2Q&usqp=CAU" alt="" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>FET CANTEEN</h5>
+
+              </div>
+            </div>
+            <div class="carousel-item  "data-interval="1000">
+              <img  class="image" src=" https://10619-2.s.cdn12.com/rests/original/109_506967486.jpg" alt="" class="d-block w-100">
+              <div class="carousel-caption">
+                <h5>Hygienic CANTEEN</h5>
+
+              </div>
+            </div>
+
+          </div>
+
+          <a href="#mycarousel" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a href="#mycarousel" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+          <a href="#mycarousel" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+          <a href="#mycarousel" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar  navbar-dark  bg-dark navbar-expand-lg  p-0 m-0  nba sticky-bottom bg-body-tertiary">
+    <div class="container-fluid    bg-dark ">
+   
+        <div class="footer1 container-fluid bg-dark   ">
+          <h3>About Us</h3>
+          Discover the story behind our canteen Management System-committed to delivering excellence in culinary
+          experiences.  <br> <br> © JAMIA CANTEEN  ALL RIGHTS RESERVED
+        </div>
+        
+        <div class="footer2 container-fluid    bg-dark">
+          <h3>Contact Information</h3>
+          For  more inquiries, reach out to us at saqib29abubakar@gmail.com/vs25@gmail.com or give us a call at <br> +91-9625035483. Connect with us on social media for latest updates. <br>
+          <div class="social-icons">
+            <a class="navbar-brand" href="https://www.instagram.com/mohdsaqib695786?igsh=OGQ5ZDc2ODk2ZA=="><img src="./images/th.jpg" height="35px" width="35px" alt="Instagram" /></a>
+            <a class="navbar-brand" href="https://www.facebook.com/profile.php?id=100095169292151&mibextid=ZbWKwL"><img src="./images/th (1).jpg" height="35px" width="35px" alt="Facebook" /></a>
+            <a  class="navbar-brand"href="https://twitter.com/MOHDSAQ54299081"><img src="./images/twitter.jpg" height="35px" width="35px" alt="Twitter" /></a>
+            <a class="navbar-brand" href="https://www.linkedin.com/in/mohd-saqib-94b6042ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="./images/th (2).jpg" height="35px" width="35px" alt="LinkedIn" /></a>
+            <a class="navbar-brand" href="https://wa.me/919625035483"><img src="./images/whatsapp.jpg" height="35px" width="35px" alt="WhatsApp" /></a>
+        </div>
+      
+      
+      
+        <div>
+        </div>
+  </div>
+    <!-- <div class="container-fluid">
+      <a class="navbar-brand" href="#">Fixed bottom</a>
+    </div> -->
+  </nav>
+ 
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+     
+</body>
+
+
+</html>

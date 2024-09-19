@@ -1,0 +1,131 @@
+/* stylecart.css - Creative Update */
+
+/* Cart Item Container */
+.cart-item {
+    border: 2px dashed #4CAF50;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(145deg, #f8f8f8, #e0e0e0);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.cart-item:hover {
+    transform: scale(1.02);
+}
+
+/* Cart Item Image */
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+    border: 2px solid #4CAF50;
+}
+
+/* Cart Item Details */
+.cart-item-details {
+    flex-grow: 1;
+    padding-left: 15px;
+}
+
+/* Cart Item Title */
+.cart-item-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Cart Item Price */
+.cart-item-price {
+    color: #FF5722;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Cart Item Quantity Input */
+.cart-item-quantity {
+    width: 300px;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+/* Cart Item Remove Button */
+.cart-item-remove {
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.cart-item-remove:hover {
+    background-color: #F44336;
+}
+
+/* Total Price Section */
+.total-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-top: 25px;
+    padding: 10px;
+    border-top: 2px dashed #4CAF50;
+}
+
+/* Proceed to Pay Button */
+.proceed-to-pay-button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease;
+}
+
+.proceed-to-pay-button:hover {
+    background-color: #1E88E5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart-item img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .cart-item {
+        padding: 15px;
+    }
+
+    .cart-item-title,
+    .cart-item-price,
+    .total-price,
+    .proceed-to-pay-button {
+        font-size: 1rem;
+    }
+
+    .cart-item-quantity {
+        width: 50px;
+        padding: 5px;
+    }
+
+    .cart-item-remove,
+    .proceed-to-pay-button {
+        padding: 5px 10px;
+    }
+}

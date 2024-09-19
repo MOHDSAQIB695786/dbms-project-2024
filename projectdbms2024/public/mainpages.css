@@ -1,0 +1,132 @@
+/* ///////////////////////////////////mainpages.css///////////////////////// */
+
+body {
+    background-color: rgb(32, 31, 31);
+    background-image: url('https://t4.ftcdn.net/jpg/02/92/20/37/360_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg');
+            
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    background-color: #f8f9fa; 
+}
+
+h3{
+    color: red;
+}
+#logo {
+    color: red;
+}
+
+.message {
+    text-shadow: 2px 2px 2px lightgreen;
+    background-color: rgb(222, 241, 241);
+    font-family: "Pacifico", cursive;
+    font-size: 1.25rem;
+}
+
+.img {
+    height: 500px;
+}
+
+.image {
+    height: 500px;
+    width: 100%;
+}
+
+footer {
+    border: 1px solid;
+    background-color: rgb(0, 0, 0);
+}
+
+.footer1 {
+    background-color: black;
+    text-align: left;
+    padding: 10px;
+    margin: 4px;
+    color: rgb(255, 255, 255);
+}
+
+.footer2 {
+    background-color: black;
+    text-align: left;
+    padding: 10px;
+    margin: 4px;
+    color: rgb(255, 255, 255);
+
+}
+
+.login-info {
+    color: rgb(185, 18, 194);
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.containerlog{
+    /* margin-left: 50px; */
+    /* margin-right: 500px; */
+    /* padding: auto; */
+    text-align: center;
+    justify-content: left;
+    color: white;
+    border: 5 px red;
+    width: 350px;
+    height: 500px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 110px;
+    /* translate: 25px; */
+    display: inline-block;
+     
+}
+.msgform{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    /* margin-top: 50px;
+     */
+     margin-bottom: 5px;
+     color: rgb(247, 156, 123);
+}
+.msgform1{
+     font-family: Arial, Helvetica, sans-serif;
+     margin-bottom: 25px;
+     margin-top: 5px;
+}
+.msgsignup{
+    margin-top: 50px;
+}
+.form-group{
+    text-align: left;
+
+}
+.form-group label{
+    margin-left: 10px;
+}
+.input {
+    color: rgb(6, 89, 104);
+    padding-left: 7px;
+    font-size: 20px;
+}
+
+.log {
+    background-color: rgb(84, 147, 168);
+    margin-top: 40px;
+}
+
+.btns {
+    font-size: 20px;
+    
+}
+.bt1{
+    width: 220px;
+    /* border-radius: 20%; */
+    /* border-left: 50%;
+    border-right: 50%; */
+    background-color: orangered;
+    
+}
+
+.carousel{
+    translate: 70px;
+}

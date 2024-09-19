@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Receipt</title>
+
+    <style>
+    /* Enhanced styling for the receipt */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #571515;
+        /* content: "JAMIA CANTEEN"; */
+    }
+   
+
+    
+    .receipt-container {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color:#c8f9d5;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(13, 12, 12, 0.2);
+    }
+    
+    .receipt-container h2 {
+        text-align: center;
+        font-size: 2.5em;
+        color: #333333;
+        margin-bottom: 0.5em;
+    }
+    
+    .receipt-container h3 {
+        text-align: center;
+        font-size: 1.5em;
+        color: #555555;
+        margin-bottom: 1em;
+    }
+    
+    .receipt-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1.5em;
+        color: #021b03;
+    }
+    
+    .receipt-table th,
+    .receipt-table td {
+        text-align: left;
+        padding: 12px;
+        border-bottom: 2px solid #f8cece;
+        background-color: #f9fbf9;
+    }
+    
+    .receipt-table th {
+        background-color: #d9f3d9;
+        color: #333333;
+        font-weight: 600;
+    }
+    
+    .total-price {
+        text-align: right;
+        margin-top:0px;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #333333;
+        background-color:#d9f3d9 ;
+        padding: 10px;
+        border-top: 2px solid #fdfcfc;
+    }
+    
+    .btn-container {
+        margin-top: 30px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .datetime {
+        text-align: center;
+        color: #777777;
+        margin-bottom: 1em;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .btn-success {
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    .btn-danger {
+        background-color: #f44336;
+        color: white;
+    }
+    
+    /* Add a print-friendly styling */
+    @media print {
+        body {
+            background-color: #ffffff;
+        }
+    
+        .btn-container {
+            display: none;
+        }
+    }
+</style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="receipt-container">
+        <h2>RECEIPT</h2>
+        <h3 class="rectit" id="receipt-title"></h3>
+        <p  class="datetime"   id="date-time"></p>
+        <table class="receipt-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody id="receipt-items">
+                <!-- Receipt items will be dynamically added here -->
+            </tbody>
+        </table>
+        <div class="total-price" id="total-price2">
+            <!-- Total price will be dynamically added here -->
+        </div>
+       
+        <div class="btn-container">        <button onclick="printReceipt()" class="btn btn-success">Print Receipt</button>
+            <button  onclick="clearCartAndGoBack()"  class="btn btn-danger">Go Back</button></div>
+
+    </div>
+   
+
+    <script>
+      
+        window.onload = function() {
+            var cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            var receiptItemsContainer = document.getElementById('receipt-items');
+            var totalPrice = 0;
+          
+
+            cart.forEach(function(item) {
+                var amount = parseInt(item.price) * parseInt(item.quantity);
+                totalPrice += amount;
+                var row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.title}</td>
+                    <td>${item.quantity}</td>
+                    <td>₹${item.price}</td>
+                    <td>₹${amount}</td>
+                `;
+                receiptItemsContainer.appendChild(row);
+            });
+
+            document.getElementById('total-price2').innerText = 'Total Price: ₹' + totalPrice;
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+     
+        });
+       
+        function printReceipt() {
+            var currentDate = new Date();
+        var formattedDate = currentDate.toLocaleDateString();
+        var formattedTime = currentDate.toLocaleTimeString();
+        document.getElementById('date-time').innerText = 'Date: ' + formattedDate + ' | Time: ' + formattedTime;
+            window.print();
+        }
+        // Retrieve the canteen title from local storage and set it to the receipt title when receipt.html loads
+document.addEventListener('DOMContentLoaded', (event) => {
+  var centralCanteenTitle = localStorage.getItem('canteenTitle');
+  document.getElementById('receipt-title').innerText = centralCanteenTitle ;
+});
+function clearCartAndGoBack() {
+    localStorage.removeItem('cart'); // Clear the cart
+    localStorage.setItem('totalPrice', '0');
+
+    window.location.href = 'user.html'; // Redirect to user.html
+}
+
+    </script>
+</body>
+</html>

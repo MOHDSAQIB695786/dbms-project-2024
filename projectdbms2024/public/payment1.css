@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://t4.ftcdn.net/jpg/02/92/20/37/360_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 300px;
+    background-color: #fbb876;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 20px;
+    display: inline;
+}
+
+.logo-button img {
+    width: 25px;
+    height: 25px;
+    border: none;
+    
+}
+
+.title {
+    margin: 20px;
+    color: #333;
+    display: inline;
+    font-size: 25px;
+    
+}
+
+.main-content {
+    text-align: center;
+}
+
+.payment-instruction {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.payment-methods {
+    text-align: center;
+}
+
+.qr-payment {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.qr-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.upi-logos img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: white;
+}
+
+.cash-delivery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.cash-delivery input[type="radio"] {
+    margin-left: 10px;
+   
+}
+
+/* Add this CSS code to your payment.css file */
+.pay-button {
+    background-color:orangered; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 5px ;
+    cursor: pointer;
+    border-radius: 4px;
+}

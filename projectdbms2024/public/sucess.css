@@ -1,0 +1,44 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.success-message {
+    background-color: #fbdddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: inline-block;
+}
+
+.success-icon {
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+    background-color:#fbdddd ;
+}
+
+.print-button, .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.print-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.back-button {
+    background-color: #f44336;
+    color: white;
+}
+
+h1 {
+    color: #333;
+}

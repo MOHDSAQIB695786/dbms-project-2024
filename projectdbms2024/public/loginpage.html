@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginpage.css">
+    <title>Login</title>
+</head>
+<body class="container">
+    <div class="form_area">
+        <h4 class="title">LOGIN</h4>
+        <form action="/login" method="POST">
+            <div class="form_group">
+                <label  for="username" class="sub_title">Username</label>
+                <input name="username" type="text" class="form_style" id="username" placeholder="Enter your username">
+            </div>
+           
+            <div class="form_group">
+                <label for="password" class="sub_title">Password</label>
+                <input name="password" type="password" class="form_style" id="password" placeholder="Enter your password" />
+            </div>
+            <div>
+                <button type="submit" class="btn">LOGIN</button>
+
+                <p class="para">Don't have an account? <a href="signup.html" class="link">Sign-up</p>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

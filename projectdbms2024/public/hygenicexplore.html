@@ -1,0 +1,842 @@
+ <!-- ///////////////////////////////////explore.html///////////////// -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+     <meta name="description" content="" />
+     <meta name="author" content="" />
+     <title>HYGENIC CANTEEN</title>
+     <!-- Bootstrap CSS -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+     <style>
+        #searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+#heading {
+    opacity: 0;
+}
+
+/* Animation for the heading */
+@keyframes fadeInLetters {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to each letter */
+#heading {
+    display: inline-block;
+    animation: fadeInLetters 1s forwards;
+    animation-delay: calc(var(--i) * 1s);
+}
+
+/* Custom property for animation delay */
+#welcome h1 {
+    --i: 0;
+}
+#welcome h1:nth-child(1) {
+    --i: 1;
+}
+#welcome h1:nth-child(2) {
+    --i: 2;
+}
+/* Add more nth-child styles for longer words */
+
+
+         .card {
+             border-radius: 15px;
+             height: 100%;
+             display: flex;
+             flex-direction: column;
+             margin-top: 15px;
+         }
+ 
+         .card-body {
+             flex-grow: 1;
+         }
+ 
+         .tos {
+             display: absolute;
+             top: 300px;
+         }
+ 
+         .head {
+             display: relative;
+             top: 0px;
+         }
+ 
+         #logo {
+             color: red;
+         }
+         .welcomeimage{
+            position: relative;
+    /* display: inline-block; */
+         }
+            .welco{
+                /* height: 500px; */
+                height: 500px;
+                width: 100%;
+                 filter: brightness(30%);
+        
+            }
+            .text-overlay {
+                width: 1000px;
+                text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(255, 255, 255, 1.0); Semi-transparent white background */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.text-overlay p {
+    
+    font-size: 18px;
+    color: rgb(255, 176, 176); /* Text color */
+}
+.text-overlay h1{
+    font-size: 90px;
+    /* font-family: pacificio ,cursive; */
+ /* font-family: poppins; */
+  font-style: normal;
+     color: rgb(24, 173, 39);
+     letter-spacing: 10px;
+}
+.text-overlay h2{
+    font-size: 50px;
+     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     color: rgb(226, 250, 226);
+}
+
+        
+         img{
+            height: 150px;
+            width: 150px;
+            
+         }
+         
+         .img123 img{
+            height: 50px;
+            width: 50px;
+            background-color: rgb(206, 84, 84);
+            border-radius: 50%;
+         }
+         .card-title{
+            text-align: center;
+            color: rgb(33, 14, 2);
+            font-size: 20px;
+         }
+         .card-text{
+            text-align: center;
+            color: rgb(23, 86, 85);
+            font-size: 20px;
+         }
+         .card img{
+            border-radius: 10px;
+         }
+         .card-body{
+            background-color: rgb(247, 236, 236);
+         }
+      
+
+         body {
+            background-image: url('https://t4.ftcdn.net/jpg/02/92/20/37/360_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg');
+            
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          
+            background-color: #f8f9fa; 
+        }
+
+
+     </style>
+ 
+ </head>
+ <div class="container-fluid bg-dark  sticky-top  ">
+    <div class="row p-0 m-0">
+        <div class="col p-0 m-3">
+            <div class="navbar  navbar-dark bg-dark navbar-expand-md  p-0 m-0 ">
+
+                <div class="navbar-brand  " id="logo">
+                    <h3>Jamia Canteen</h3>
+                </div>
+                <div class="navbar-toggler " data-toggle="collapse" data-target="#mynav">
+                    <div class="navbar-toggler-icon"></div>
+                </div>
+                <ul class="navbar-nav collapse navbar-collapse  " id="mynav">
+                    <h4>
+                        <li class="nav-item ms-0"><a href="user.html" class="nav-link">Home</a></li>
+                    </h4>
+                    <h4>
+                        <li class="nav-item"><a href="vision.html" class="nav-link">Vision</a></li>
+                    </h4>
+                    <h4>
+                        <li class="nav-item"><a href="vision.html" class="nav-link">Mission</a></li>
+                    </h4>
+                    
+                    <h4>
+                        <li class="nav-item"><a href="mainpage.html" class="nav-link ">Logout</a></li>
+                    </h4>
+                    <h4>
+                        <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+
+                    </h4>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="welcome">
+    <div class="welcomeimage">   
+        <img src="  https://10619-2.s.cdn12.com/rests/original/109_506967486.jpg" class="welco" height="500px" width="100%" alt="">
+        <div class="text-overlay">
+            <h1 id="heading">HYGENIC CANTEEN</h1>
+            <h2>Welcomes You!</h2>
+            <p><i>"Experience food at its purest form at Hygienic Canteen, where cleanliness and freshness are the top priorities, ensuring every meal is not just delicious but also safe and healthy."</i></p>             <div class="col-md-12 mb-4">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search items...">
+            </div>
+            <div class="img123" onclick="scrollToBody()"><img src="./images/OIP (1).jpeg" alt=""></div>
+           
+        </div>
+    </div>
+</div>
+
+
+   
+  </div>
+
+  <div class="alert alert-success fixed-top" id="cartMessage" style="display: none;">
+    <strong>Item added to cart successfully!</strong>
+</div>
+
+
+ <body>
+     <!-- navbar -->
+   
+    
+     <div class="container">
+ 
+         <!-- Category Cards -->
+         <div class="container">
+             <div class="row" id="cartItemsContainer">
+                 <!-- Hardcoded cards -->
+                
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-aloo-gobi-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Aloo Gobi</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹50</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 ">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="1" />
+                            <img src="https://www.cookwithnabeela.com/wp-content/uploads/2024/02/AlooSamosa3.webp"
+                                class="card-img-top" alt="Samosas Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Samosas</h5>
+                                
+                                <p class="card-text"><strong>Price:</strong> ₹10</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton1">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Continue adding more hardcoded cards for the other items -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="https://bachelorrecipe.com/wp-content/uploads/2018/05/Vegetable-Sandwich.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Sandwich</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹30</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                   <div class="card">
+                       <form method="post" action="/Cart/AddToCart">
+                           <input type="hidden" name="itemId" value="2" />
+                           <img src="./images/india-food-tandoori-chicken-1120x732.jpg"
+                               class="card-img-top" alt="Sandwich Image" />
+                           <div class="card-body">
+                               <h5 class="card-title">Tandoori Chicken</h5>
+                              
+                               <p class="card-text"><strong>Price:</strong> ₹70</p>
+                              
+                               <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                           </div>
+                       </form>
+                   </div>
+               </div>
+               <div class="col-md-3 mb-4">
+                   <div class="card">
+                       <form method="post" action="/Cart/AddToCart">
+                           <input type="hidden" name="itemId" value="2" />
+                           <img src="./images/pakora.jpg"
+                               class="card-img-top" alt="Sandwich Image" />
+                           <div class="card-body">
+                               <h5 class="card-title">Pakora</h5>
+                              
+                               <p class="card-text"><strong>Price:</strong> ₹20</p>
+                              
+                               <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                           </div>
+                       </form>
+                   </div>
+               </div>
+                <!-- Card 3 -->
+               
+
+                <!-- Card 5 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="5" />
+                            <img src="https://www.olivetomato.com/wp-content/uploads/2016/02/SAM4952-1.jpg"
+                                class="card-img-top" alt="Omelet Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Omelet</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹25</p>
+                                
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton5">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="6" />
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Chole_Kulcha_Meal_-_Order_Food_Online_in_Mumbai_%2831013272937%29.jpg/400px-Chole_Kulcha_Meal_-_Order_Food_Online_in_Mumbai_%2831013272937%29.jpg"
+                                class="card-img-top" alt="Chole Butture Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Chole Butture</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹50</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton6">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="7" />
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/06/Plain-Dosa.jpg.webp"
+                                class="card-img-top" alt="Dosa Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Dosa</h5>
+                              
+                                <p class="card-text"><strong>Price:</strong> ₹40</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton7">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="8" />
+                            <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/05/french-fries.jpg.webp"
+                                class="card-img-top" alt="French Fries Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">French Fries</h5>
+                              
+                                <p class="card-text"><strong>Price:</strong> ₹60</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton8">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                   <div class="card">
+                       <form method="post" action="/Cart/AddToCart">
+                           <input type="hidden" name="itemId" value="2" />
+                           <img src="./images/Dhokla_20191010162234.jpg"
+                               class="card-img-top" alt="Sandwich Image" />
+                           <div class="card-body">
+                               <h5 class="card-title">Dhokla</h5>
+                              
+                               <p class="card-text"><strong>Price:</strong> ₹50</p>
+                              
+                               <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                           </div>
+                       </form>
+                   </div>
+               </div>
+               <div class="col-md-3 mb-4">
+                   <div class="card">
+                       <form method="post" action="/Cart/AddToCart">
+                           <input type="hidden" name="itemId" value="2" />
+                           <img src="./images/india-food-aloo-chaat-1120x732.jpg"
+                               class="card-img-top" alt="Sandwich Image" />
+                           <div class="card-body">
+                               <h5 class="card-title">Aloo Chat</h5>
+                              
+                               <p class="card-text"><strong>Price:</strong> ₹20</p>
+                              
+                               <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                           </div>
+                       </form>
+                   </div>
+               </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-barfi-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Barfi</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹20</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-biriyani-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Biryani</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹50</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-butter-chicken-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Butter Chicken</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹60</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-chana-masala-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Chana Masala</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹30</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-dal-makani-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Dal Makhni</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹40</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-dal-tadka-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Dal Tadka</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹40</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-gulab-jamun-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Gulab Jamun</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹20</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-idli-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Idli</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹40</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-kulfi-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Kulfi</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹10</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-lassi-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Lassi</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹35</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-sambar-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Sambhar</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹30</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-shahi-paneer-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Shahi Paneer</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹60</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/rajma chawal.jpeg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Rajma Chawal</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹60</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/tea.jpeg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Tea</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹10</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+               
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-masala-dosa-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Dosa</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹50</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-naan-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Naan</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹30</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-paratha-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Paratha</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹20</p>
+                               
+                                <button class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+ 
+                 <!-- Bootstrap JS -->
+                 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+             </div>
+         </div>
+     </div>
+     <script>function scrollToBody() {
+        window.scrollTo({
+            top: 500,
+            behavior: 'smooth'
+        });
+    }
+    const searchInput = document.getElementById('searchInput');
+const cards = document.querySelectorAll('.card');
+const cartItemsContainer = document.getElementById('cartItemsContainer');
+const container1= document.querySelector('.container');
+
+searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    cards.forEach(card => {
+        const title = card.querySelector('.card-title').textContent.toLowerCase();
+        const text = card.querySelector('.card-text').textContent.toLowerCase();
+        if (title.includes(searchTerm) || text.includes(searchTerm)) {
+            card.style.display = 'flex';
+            container1.style.display= 'inline';
+            card.style.opacity = '1'; // Make matching cards fully visible
+        } else {
+
+           
+                        card.style.display = 'none';
+            card.style.opacity = '0.0'; // Make non-matching cards less visible
+        }
+    });
+    
+});
+document.addEventListener('click', function (event) {
+    if (!event.target.matches('.btn-danger')) return;
+    event.preventDefault();
+
+    // Get the item details
+    var card = event.target.closest('.card');
+    var title = card.querySelector('.card-title').innerText;
+    var price = card.querySelector('.card-text').innerText.split(' ')[1].substring(1); // remove the '₹' symbol
+    var imgSrc = card.querySelector('.card-img-top').src;
+    var quantity=1;
+    // Save the item details to local storage
+    var cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    cart.push({ title: title, price: price, imgSrc: imgSrc ,quantity: 1 });
+    localStorage.setItem('cart', JSON.stringify(cart));
+}, false);
+
+// Store the canteen title in local storage when ccanteen.html loads
+document.addEventListener('DOMContentLoaded', (event) => {
+  var centralCanteenTitle = document.getElementById('heading').innerText;
+  localStorage.setItem('canteenTitle', centralCanteenTitle);
+});
+
+window.onload = function() {
+    fetch('/getItems')
+        .then(response => response.json())
+        .then(items => {
+            const cartItemsContainer = document.querySelector('#cartItemsContainer');
+
+            items.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'col-md-3 mb-4   ';
+                const card2 = document.createElement('div');
+                card2.className = 'card ';
+                const form = document.createElement('form');
+                form.method = 'post';
+                form.action = '/Cart/AddToCart';
+
+                const hiddenInput = document.createElement('input');
+                hiddenInput.type = 'hidden';
+                hiddenInput.name = 'itemId';
+                hiddenInput.value = item._id;
+
+                const img = document.createElement('img');
+                img.src = item.image;
+                img.className = 'card-img-top';
+                img.alt = item.title + 'Image';
+
+                const cardBody = document.createElement('div');
+                cardBody.className = 'card-body';
+
+                const title = document.createElement('h5');
+                title.className = 'card-title';
+                title.textContent = item.title;
+
+                const price = document.createElement('p');
+                price.className = 'card-text';
+                price.innerHTML = '<strong>Price:</strong> ₹' + item.price;
+
+                const button = document.createElement('button');
+                button.className = 'btn btn-danger btn-block flashmsg msgnew';
+button.onclick = flashmessage();
+                button.id = 'addtoCartButton' + item._id;
+                button.textContent = 'Add to Cart';
+                // class="btn btn-danger btn-block  flashmsg  flashmsg" id="addtoCartButton2"
+                form.appendChild(hiddenInput);
+                form.appendChild(img);
+                form.appendChild(cardBody);
+
+                cardBody.appendChild(title);
+                cardBody.appendChild(price);
+                cardBody.appendChild(button);
+
+               
+
+                card2.appendChild(form);
+                card.appendChild(card2);
+                cartItemsContainer.appendChild(card);
+            });
+        });
+}
+
+
+
+    </script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <script src="my-custom-script.js"></script>
+     <script>
+        // Function to display the flash message
+        function flashmessage() {
+            // Create a flash message element
+            const flashMessage = document.createElement('div');
+            flashMessage.className = 'flash-msg';
+            flashMessage.textContent = 'Item added to cart!';
+
+            // Append the flash message to the body
+            document.body.appendChild(flashMessage);
+
+            // Remove the flash message after 2 seconds
+            setTimeout(function() {
+                document.body.removeChild(flashMessage);
+            }, 2000);
+        }
+    </script>
+ </body>

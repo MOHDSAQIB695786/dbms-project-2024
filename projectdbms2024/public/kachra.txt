@@ -1,0 +1,619 @@
+ <!-- ///////////////////////////////////explore.html///////////////// -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+     <meta name="description" content="" />
+     <meta name="author" content="" />
+     <title>Category List</title>
+     <!-- Bootstrap CSS -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+     <style>
+         /* Custom CSS for rounding card edges and adjusting card size */
+         .card {
+             border-radius: 15px;
+             height: 100%;
+             display: flex;
+             flex-direction: column;
+         }
+ 
+         .card-body {
+             flex-grow: 1;
+         }
+ 
+         .tos {
+             display: absolute;
+             top: 300px;
+         }
+ 
+         .head {
+             display: relative;
+             top: 0px;
+         }
+ 
+         #logo {
+             color: red;
+         }
+ 
+        
+         img{
+            height: 200px;
+            width: 200px;
+            
+         }
+         .card-title{
+            text-align: center;
+            color: rgb(6, 23, 6);
+            font-size: 30px;
+         }
+         .card-text{
+            text-align: center;
+            color: rgb(130, 7, 244);
+            font-size: 20px;
+         }
+         .card-body{
+            background-color: rgb(247, 236, 236);
+         }
+         body {
+            
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          
+            background-color: #f8f9fa; 
+        }
+     </style>
+ 
+ </head>
+ 
+ <body>
+     <!-- navbar -->
+   
+     <div class="container-fluid bg-dark  sticky-top  ">
+         <div class="row p-0 m-0">
+             <div class="col p-0 m-3">
+                 <div class="navbar  navbar-dark bg-dark navbar-expand-md  p-0 m-0 ">
+ 
+                     <div class="navbar-brand  " id="logo">
+                         <h3>Jamia Canteen</h3>
+                     </div>
+                     <div class="navbar-toggler " data-toggle="collapse" data-target="#mynav">
+                         <div class="navbar-toggler-icon"></div>
+                     </div>
+                     <ul class="navbar-nav collapse navbar-collapse  " id="mynav">
+                         <h4>
+                             <li class="nav-item ms-0"><a href="user.html" class="nav-link">Home</a></li>
+                         </h4>
+                         <h4>
+                             <li class="nav-item"><a href="vision.html" class="nav-link">Vision</a></li>
+                         </h4>
+                         <h4>
+                             <li class="nav-item"><a href="vision.html" class="nav-link">Mission</a></li>
+                         </h4>
+                         
+                         <h4>
+                             <li class="nav-item"><a href="" class="nav-link ">Logout</a></li>
+                         </h4>
+                         <h4>
+                             <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+ 
+                         </h4>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="container">
+ 
+         <!-- Category Cards -->
+         <div class="container">
+             <div class="row">
+                 <!-- Hardcoded cards -->
+                 <div class="col-md-4 mb-4 ">
+                     <div class="card">
+                         <form class="add-to-cart-form" >
+                             <input type="hidden" name="itemId" value="1" />
+                             <img src="https://www.cookwithnabeela.com/wp-content/uploads/2024/02/AlooSamosa3.webp"
+                                 class="card-img-top" alt="Samosas Image" />
+                             <div class="card-body">
+                                 <h5 class="card-title">Samosas</h5>
+                                 
+                                 <p class="card-text"><strong>Price:</strong> ₹10</p>
+                                
+                                 <button class="btn btn-primary btn-block" id="addtoCartButton1">Add to Cart</button>
+                             </div>
+                         </form>
+                     </div>
+                 </div>
+                 <!-- Continue adding more hardcoded cards for the other items -->
+                 <div class="col-md-4 mb-4">
+                     <div class="card">
+                         <form class="add-to-cart-form" >
+                             <input type="hidden" name="itemId" value="2" />
+                             <img src="https://bachelorrecipe.com/wp-content/uploads/2018/05/Vegetable-Sandwich.jpg"
+                                 class="card-img-top" alt="Sandwich Image" />
+                             <div class="card-body">
+                                 <h5 class="card-title">Sandwich</h5>
+                                
+                                 <p class="card-text"><strong>Price:</strong> ₹30</p>
+                                
+                                 <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                             </div>
+                         </form>
+                     </div>
+                 </div>
+                 <!-- Card 3 -->
+                 <div class="col-md-4 mb-4">
+                     <div class="card">
+                         <form class="add-to-cart-form" >
+                             <input type="hidden" name="itemId" value="3" />
+                             <img src="https://www.cookwithmanali.com/wp-content/uploads/2014/08/Poha-Recipe-1014x1536.jpg"
+                                 class="card-img-top" alt="Poha Image" />
+                             <div class="card-body">
+                                 <h5 class="card-title">Poha</h5>
+                               
+                                 <p class="card-text"><strong>Price:</strong> ₹40</p>
+                                
+                                 <button class="btn btn-primary btn-block" id="addtoCartButton3">Add to Cart</button>
+                             </div>
+                         </form>
+                     </div>
+                 </div>
+ 
+                 <!-- Card 4 -->
+                 <div class="col-md-4 mb-4">
+                     <div class="card">
+                         <form class="add-to-cart-form" >
+                             <input type="hidden" name="itemId" value="4" />
+                             <img src="https://carameltintedlife.com/wp-content/uploads/2020/08/How-to-Make-Masala-Chai-1-of-1-8-1025x1536.jpg"
+                                 class="card-img-top" alt="Milkshake Image" />
+                             <div class="card-body">
+                                 <h5 class="card-title">Milkshake</h5>
+                                
+                                 <p class="card-text"><strong>Price:</strong> ₹50</p>
+                                 
+                                 <button class="btn btn-primary btn-block" id="addtoCartButton4">Add to Cart</button>
+                             </div>
+                         </form>
+                     </div>
+                 </div>
+ 
+                 <!-- Card 5 -->
+                 <div class="col-md-4 mb-4">
+                     <div class="card">
+                         <form class="add-to-cart-form"class="add-to-cart-form" >
+                             <input type="hidden" name="itemId" value="5" />
+                             <img src="https://www.olivetomato.com/wp-content/uploads/2016/02/SAM4952-1.jpg"
+                                 class="card-img-top" alt="Omelet Image" />
+                             <div class="card-body">
+                                 <h5 class="card-title">Omelet</h5>
+                                
+                                 <p class="card-text"><strong>Price:</strong> ₹25</p>
+                                 
+                                 <button class="btn btn-primary btn-block" id="addtoCartButton5">Add to Cart</button>
+                             </div>
+                         </form>
+                     </div>
+                 </div>
+                 <!-- Card 6 -->
+                 <div class="col-md-4 mb-4"> 
+                     <div class="card">
+                         <form class="add-to-cart-form"  >
+                             <input type="hidden" name="itemId" value="6" />
+                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Chole_Kulcha_Meal_-_Order_Food_Online_in_Mumbai_%2831013272937%29.jpg/400px-Chole_Kulcha_Meal_-_Order_Food_Online_in_Mumbai_%2831013272937%29.jpg"
+                                 class="card-img-top" alt="Chole Butture Image" />
+                             <div class="card-body">
+                                 <h5 class="card-title">Chole Butture</h5>
+                                
+                                 <p class="card-text"><strong>Price:</strong> ₹50</p>
+                                
+                                 <button class="btn btn-primary btn-block" id="addtoCartButton6">Add to Cart</button>
+                             </div>
+                         </form>
+                     </div>
+                 </div>
+ 
+                 <!-- Card 7 -->
+                 <div class="col-md-4 mb-4">
+                     <div class="card">
+                         <form class="add-to-cart-form" >
+                             <input type="hidden" name="itemId" value="7" />
+                             <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/06/Plain-Dosa.jpg.webp"
+                                 class="card-img-top" alt="Dosa Image" />
+                             <div class="card-body">
+                                 <h5 class="card-title">Dosa</h5>
+                               
+                                 <p class="card-text"><strong>Price:</strong> ₹40</p>
+                                
+                                 <button class="btn btn-primary btn-block" id="addtoCartButton7">Add to Cart</button>
+                             </div>
+                         </form>
+                     </div>
+                 </div>
+ 
+                 <!-- Card 8 -->
+                 <div class="col-md-4 mb-4">
+                     <div class="card">
+                         <form class="add-to-cart-form" >
+                             <input type="hidden" name="itemId" value="8" />
+                             <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/05/french-fries.jpg.webp"
+                                 class="card-img-top" alt="French Fries Image" />
+                             <div class="card-body">
+                                 <h5 class="card-title">French Fries</h5>
+                               
+                                 <p class="card-text"><strong>Price:</strong> ₹60</p>
+                                
+                                 <button class="btn btn-primary btn-block" id="addtoCartButton8">Add to Cart</button>
+                             </div>
+                         </form>
+                     </div>
+                 </div>
+
+                 <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/Dhokla_20191010162234.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Dhokla</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹50</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-aloo-chaat-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Aloo Chat</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹20</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-aloo-gobi-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Aloo Gobi</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹50</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-barfi-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Barfi</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹20</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-biriyani-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Biryani</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹50</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-butter-chicken-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Butter Chicken</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹60</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-chana-masala-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Chana Masala</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹30</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-dal-makani-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Dal Makhni</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹40</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-dal-tadka-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Dal Tadka</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹40</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-gulab-jamun-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Gulab Jamun</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹20</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-idli-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Idli</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹40</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-kulfi-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Kulfi</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹10</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-lassi-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Lassi</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹35</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-masala-dosa-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Dosa</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹50</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-naan-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Naan</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹30</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-paratha-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Paratha</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹20</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-sambar-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Sambhar</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹30</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-shahi-paneer-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Shahi Paneer</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹60</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/india-food-tandoori-chicken-1120x732.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Tandoori Chicken</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹70</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/pakora.jpg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Pakora</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹20</p>
+                               
+                                <!-- <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button> -->
+                                <button class="btn btn-primary btn-block" onclick="addToCart(event, 'Pakora', 20, './images/pakora.jpg')">Add to Cart</button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/rajma chawal.jpeg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Rajma Chawal</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹60</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <form class="add-to-cart-form" >
+                            <input type="hidden" name="itemId" value="2" />
+                            <img src="./images/tea.jpeg"
+                                class="card-img-top" alt="Sandwich Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">Tea</h5>
+                               
+                                <p class="card-text"><strong>Price:</strong> ₹10</p>
+                               
+                                <button class="btn btn-primary btn-block" id="addtoCartButton2">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+               
+ 
+                 <!-- Bootstrap JS -->
+                 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+             </div>
+         </div>
+     </div>
+     <script src="addtocart.js"></script>
+ </body>
